@@ -25,21 +25,21 @@ const Contact = () => {
           message: "",
         }}
         validationSchema={validate}
-        onSubmit={(values) => {
-          const formData = new FormData();
-          Object.entries(values).forEach(([key, value]) => {
-            formData.append(key, value);
-          });
-          fetch("https://getform.io/f/dc135e7d-8317-4e8a-a369-c005a4c1cc94", {
-            method: "POST",
-            body: formData,
-            headers: {
-                "Accept": "application/json",
-            },
-        })
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
-        }}
+        // onSubmit={(values) => {
+        //   const formData = new FormData();
+        //   Object.entries(values).forEach(([key, value]) => {
+        //     formData.append(key, value);
+        //   });
+        //   fetch("https://getform.io/f/dc135e7d-8317-4e8a-a369-c005a4c1cc94", {
+        //     method: "POST",
+        //     body: formData,
+        //     headers: {
+        //         "Accept": "application/json",
+        //     },
+        // })
+        // .then(response => console.log(response))
+        // .catch(error => console.log(error))
+        // }}
       >
         {(formik) => (
           <Form className="flex flex-col max-w-[600px] w-full">
