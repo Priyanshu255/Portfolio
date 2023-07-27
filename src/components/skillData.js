@@ -7,6 +7,7 @@ import Tailwind from '../assets/tailwind.png';
 import C from '../assets/c.png';
 import Cpp from '../assets/cpp.png';
 import Mysql from '../assets/mysql.png';
+import MUI from '../assets/mui.png';
 
 export const data=[
     {
@@ -63,6 +64,12 @@ export const data=[
         src: Mysql,
         alt: "Mysql",
     },
+    {
+        id:10,
+        name:"Material UI",
+        src: MUI,
+        alt: "Material UI",
+    }
 
 
 ]

@@ -7,17 +7,36 @@
     font-family: 'Raleway', sans-serif;
 }
 
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #0a192f;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(219 39 119);
+    margin: 2px;
+    border-radius: 20px;
+}
+
 .active{
     border-bottom-width: 4px;
     border-color: rgb(219 39 119);
 }
 
-.content-div{
+.projectCard{
+    box-shadow: 3px 3px 20px #040c16,
+    -3px -3px 20px #040c16;
+}
+
+/* .content-div{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 250px;
-}
+} */
 
 /* .content-div:hover {
     background-image: linear-gradient(

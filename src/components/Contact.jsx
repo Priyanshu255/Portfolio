@@ -6,6 +6,7 @@ import { Formik, Form} from "formik";
 import * as Yup from "yup";
 import TextField from "./TextField";
 import TextArea from "./TextArea";
+import Resume from "../assets/resume/PriyanshuPandit.pdf";
 
 const Contact = () => {
   const validate = Yup.object({
@@ -68,7 +69,7 @@ const Contact = () => {
                   </a>
                 </li>
                 <li className="hover:scale-150 px-2 duration-300">
-                  <a href="http://">
+                  <a href={Resume} download>
                     <BsFillPersonLinesFill size={30} />
                   </a>
                 </li>
