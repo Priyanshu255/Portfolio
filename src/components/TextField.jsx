@@ -6,7 +6,7 @@ const TextField = ({...props}) => {
   return (
     <div>
       <input
-        className= {`my-2 w-full p-2 text-black bg-[#ccd6f6] shadow-lg shadow-[#040c16] border-4 ${meta.touched && meta.error && 'border-red-700'}`}
+        className= {`my-2 w-full p-2 text-black bg-[#E0E0E0] dark:bg-[#ccd6f6] shadow-lg shadow-[#040c166b] border-4 ${meta.touched && meta.error && 'border-red-700'}`}
         {...field} {...props}
         autoComplete='off'
       />

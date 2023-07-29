@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="w-full pt-[100px] pb-[50px] text-gray-300 bg-[#0a192f]"
+      className="w-full pt-[100px] pb-[50px] bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-gray-300"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -22,7 +22,7 @@ const Projects = () => {
           {/* grid items*/}
           {projects.map((item) => (
             <div className="flex flex-col projectCard" key={item.id}>
-              <span className="px-4 py-2 text-[23px] font-bold text-gray-100 border-b-4 border-pink-600 tracking-wider">
+              <span className="px-4 py-2 text-[23px] font-bold text-[#0a192f] dark:text-gray-100 border-b-4 border-pink-600 tracking-wider">
                 {item.name}
               </span>
               <img className="mx-2 mt-6 projectCard" src={item.image} />

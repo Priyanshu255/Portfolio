@@ -1,17 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { BsMoon } from "react-icons/bs";
+import { BiSun } from "react-icons/bi";
 import Logo from "../assets/myname.png";
 import { Link } from "react-scroll";
 import Resume from "../assets/resume/PriyanshuPandit.pdf";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [theme, setTheme] = useState("dark");
   const handleClick = () => setNav(!nav);
+  const handleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+    // console.log(theme);
+  };
+
+  useEffect(() => {
+    if (theme == "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
   return (
     <>
-      <div className="fixed w-full h-[80px] shadow-md shadow-[#040c16] flex justify-between items-center px-7 bg-[#0a192f] text-gray-300">
+      <div className="fixed w-full h-[80px] projectCard flex justify-between items-center px-7 bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-gray-300">
         <div>
           <img src={Logo} alt="logo image" style={{ width: "90px" }} />
         </div>
@@ -68,18 +84,27 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          <div onClick={handleTheme} className="ml-6">
+            {theme === "dark" ? <BiSun size={27} /> : <BsMoon size={22} />}
+          </div>
         </ul>
 
         {/* hamburger */}
+        <div
+          onClick={handleTheme}
+          className="md:hidden absolute right-[80px]"
+        >
+          {theme === "dark" ? <BiSun size={27} /> : <BsMoon size={25} />}
+        </div>
         <div onClick={handleClick} className="md:hidden z-10">
-          {nav ? <FaTimes size={30}/> : <FaBars size={30}/>}
+          {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
 
         {/* mobile menu */}
         <ul
           className={
             nav
-              ? "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+              ? "absolute top-0 left-0 w-full h-screen bg-[#E0E0E0] dark:bg-[#0a192f] flex flex-col justify-center items-center"
               : "hidden"
           }
         >

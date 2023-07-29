@@ -17,7 +17,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full pt-[100px] text-gray-300 bg-[#0a192f] flex justify-center items-center p-4"
+      className="w-full pt-[100px] bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-gray-300 flex justify-center items-center p-4"
     >
       <Formik
         initialValues={{
@@ -80,7 +80,7 @@ const Contact = () => {
             <TextField name = "email" type = "email" placeholder="Email"/>
             <TextArea name = "message" type = "text" rows = "10" placeholder="Message"/>
 
-            <button type="submit" className="text-white shadow-lg shadow-[#040c16] border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
+            <button type="submit" className="text-white shadow-2xl shadow-[#040c166b] bg-[#0a192f] border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
               Let's Colloborate
             </button>
 

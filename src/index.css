@@ -27,8 +27,11 @@
 }
 
 .projectCard{
-    box-shadow: 3px 3px 20px #040c16,
-    -3px -3px 20px #040c16;
+    box-shadow: 5px 5px 20px #040c16;
+}
+
+.skillCard{
+    box-shadow: 2px 2px 10px #040c16;
 }
 
 /* .content-div{
