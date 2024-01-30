@@ -9,3 +9,6 @@
 >- Form validation using formik and yup
 >- Smooth scrolling effects on navigating to different sections
 >- I will get an email with message when form is submitted
+
+#
+>Hosted Link: https://priyanshu255.github.io/Portfolio/
