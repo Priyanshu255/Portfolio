@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Noto Serif Tibetan
-- Font Author: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tibetan)
-- Font Source: http://fonts.gstatic.com/s/notoseriftibetan/v22/gokGH7nwAEdtF9N45n0Vaz7O-pk0wsvxHeDXMfqguoCmIrYcPS7rdSy_32c.ttf
+- Font Title: Content
+- Font Author: http://scripts.sil.org/OFL
+- Font Source: http://fonts.gstatic.com/s/content/v24/zrfl0HLayePhU_AwUaDyIiL0RCg.ttf
 - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

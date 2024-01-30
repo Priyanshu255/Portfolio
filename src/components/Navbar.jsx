@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { BsMoon } from "react-icons/bs";
+// import { HiOutlineMail } from "react-icons/hi";
+// import { BsFillPersonLinesFill } from "react-icons/bs";
+// import { BsMoon } from "react-icons/bs";
+import { HiOutlineMoon } from "react-icons/hi2";
 import { BiSun } from "react-icons/bi";
-import Logo from "../assets/myname.png";
+import Logo from "../assets/apple-touch-icon.png";
 import { Link } from "react-scroll";
-import Resume from "../assets/resume/PriyanshuPandit.pdf";
+// import Resume from "../assets/resume/PriyanshuPandit.pdf";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -27,16 +28,16 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-full h-[80px] projectCard flex justify-between items-center px-7 bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-gray-300">
+      <div className="fixed z-50 w-full h-[80px] projectCard flex justify-between items-center px-7 bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-white">
         <div>
-          <img src={Logo} alt="logo image" style={{ width: "90px" }} />
+          <img src={Logo} alt="logo image" style={{ width: "40px", boxShadow: "2px 2px 20px #382bf0", borderRadius: "10px" }} />
         </div>
 
         {/* menu */}
         <ul className="hidden md:flex">
           <Link
             activeClass="active"
-            className="cursor-pointer mx-2 inline hover:border-b-4 border-pink-600"
+            className="cursor-pointer mx-2 px-1 inline font-bold hover:border-b-[3px] border-[#382bf0]"
             spy={true}
             to="home"
             smooth={true}
@@ -46,7 +47,7 @@ const Navbar = () => {
           </Link>
           <Link
             activeClass="active"
-            className="cursor-pointer mx-2 inline hover:border-b-4 border-pink-600"
+            className="cursor-pointer mx-2 px-1 inline font-bold hover:border-b-[3px] border-[#382bf0]"
             spy={true}
             to="about"
             smooth={true}
@@ -56,7 +57,7 @@ const Navbar = () => {
           </Link>
           <Link
             activeClass="active"
-            className="cursor-pointer mx-2 inline hover:border-b-4 border-pink-600"
+            className="cursor-pointer mx-2 px-1 inline font-bold hover:border-b-[3px] border-[#382bf0]"
             spy={true}
             to="skills"
             smooth={true}
@@ -66,7 +67,7 @@ const Navbar = () => {
           </Link>
           <Link
             activeClass="active"
-            className="cursor-pointer mx-2 inline hover:border-b-4 border-pink-600"
+            className="cursor-pointer mx-2 px-1 inline font-bold hover:border-b-[3px] border-[#382bf0]"
             spy={true}
             to="projects"
             smooth={true}
@@ -76,7 +77,7 @@ const Navbar = () => {
           </Link>
           <Link
             activeClass="active"
-            className="cursor-pointer mx-2 inline hover:border-b-4 border-pink-600"
+            className="cursor-pointer mx-2 px-1 inline font-bold hover:border-b-[3px] border-[#382bf0]"
             spy={true}
             to="contact"
             smooth={true}
@@ -84,27 +85,27 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          <div onClick={handleTheme} className="ml-6">
-            {theme === "dark" ? <BiSun size={27} /> : <BsMoon size={22} />}
+          <div onClick={handleTheme} className="ml-6 cursor-pointer dark:text-blue-300 text-[#0a192f]">
+            {theme === "dark" ? <BiSun size={27} /> : <HiOutlineMoon size={25} />}
           </div>
         </ul>
 
         {/* hamburger */}
         <div
           onClick={handleTheme}
-          className="md:hidden absolute right-[80px]"
+          className="md:hidden absolute right-[80px] cursor-pointer text-[#0a192f] dark:text-blue-300"
         >
-          {theme === "dark" ? <BiSun size={27} /> : <BsMoon size={25} />}
+          {theme === "dark" ? <BiSun size={27} /> : <HiOutlineMoon size={26} />}
         </div>
-        <div onClick={handleClick} className="md:hidden z-10">
-          {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        <div onClick={handleClick} className="md:hidden z-10 text-[#0a192f] dark:text-blue-300">
+          {nav ? <FaTimes size={30} /> : <FaBars size={25} />}
         </div>
 
         {/* mobile menu */}
         <ul
           className={
             nav
-              ? "absolute top-0 left-0 w-full h-screen bg-[#E0E0E0] dark:bg-[#0a192f] flex flex-col justify-center items-center"
+              ? "absolute top-0 left-0 w-full h-screen bg-[#E0E0E0] dark:text-blue-300 dark:bg-[#0a192f] flex flex-col justify-center items-center"
               : "hidden"
           }
         >
@@ -151,7 +152,7 @@ const Navbar = () => {
         </ul>
 
         {/* social icons */}
-        <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
+        {/* <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
           <ul>
             <li className="w-[160px] h-[60px] px-4 flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-blue-600">
               <a
@@ -187,7 +188,7 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -8,68 +8,93 @@ import C from '../assets/c.png';
 import Cpp from '../assets/cpp.png';
 import Mysql from '../assets/mysql.png';
 import MUI from '../assets/mui.png';
+import Node from '../assets/node.png'
+import MongoDB from '../assets/mongo.png'
+import Python from '../assets/python.png'
+import TypeScript from '../assets/typescript.png'
+import Git from '../assets/git.png'
+import VSCode from '../assets/vscode.png'
 
 export const data=[
     {
-        id:1,
         name:"HTML",
         src: HTML,
         alt: "HTML",
     },
     {
-        id:2,
         name:"CSS",
         src: CSS,
         alt: "CSS",
     },
     {
-        id:3,
         name:"JavaScript",
         src: JavaScript,
         alt: "JavaScript",
     },
     {
-        id:4,
-        name:"ReactJS",
-        src: ReactImg,
-        alt: "React",
+        name:"TypeScript",
+        src: TypeScript,
+        alt: "TypeScript",
     },
     {
-        id:5,
-        name:"GitHub",
-        src: GitHub,
-        alt: "GitHub",
-    },
-    {
-        id:6,
-        name:"Tailwind",
-        src: Tailwind,
-        alt: "Tailwind",
-    },
-    {
-        id:7,
         name:"C",
         src: C,
         alt: "C",
     },
     {
-        id:8,
         name:"C++",
         src: Cpp,
         alt: "Cpp",
     },
     {
-        id:9,
+        name:"Python",
+        src: Python,
+        alt: "Python",
+    },
+    {
+        name:"NodeJS",
+        src: Node,
+        alt: "NodeJS",
+    },
+    {
+        name:"ReactJS",
+        src: ReactImg,
+        alt: "React",
+    },
+    {
+        name:"MongoDB",
+        src: MongoDB,
+        alt: "MongoDB",
+    },
+    {
+        name:"GitHub",
+        src: GitHub,
+        alt: "GitHub",
+    },
+    {
+        name:"Git",
+        src: Git,
+        alt: "Git",
+    },
+    {
+        name:"Tailwind",
+        src: Tailwind,
+        alt: "Tailwind",
+    },
+    {
         name:"MySQL",
         src: Mysql,
         alt: "Mysql",
     },
     {
-        id:10,
         name:"Material UI",
         src: MUI,
         alt: "Material UI",
-    }
-
+    },
+    {
+        name:"VSCode",
+        src: VSCode,
+        alt: "VSCode",
+    },
 
 ]

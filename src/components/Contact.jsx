@@ -2,11 +2,11 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { Formik, Form} from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import TextField from "./TextField";
 import TextArea from "./TextArea";
-import Resume from "../assets/resume/PriyanshuPandit.pdf";
+import Resume from "../assets/resume/PriyanshuPandit_Resume.pdf";
 
 const Contact = () => {
   const validate = Yup.object({
@@ -17,7 +17,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full pt-[100px] bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-gray-300 flex justify-center items-center p-4"
+      className="w-full pt-[100px] bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-blue-300 flex justify-center items-center p-4"
     >
       <Formik
         initialValues={{
@@ -26,7 +26,7 @@ const Contact = () => {
           message: "",
         }}
         validationSchema={validate}
-        onSubmit={(values) => {
+        onSubmit={(values, formik) => {
           const formData = new FormData();
           Object.entries(values).forEach(([key, value]) => {
             formData.append(key, value);
@@ -35,18 +35,24 @@ const Contact = () => {
             method: "POST",
             body: formData,
             headers: {
-                "Accept": "application/json",
+              Accept: "application/json",
             },
-        })
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
+          })
+            .then((response) => {
+              if (response.ok) {
+                alert("Message sent!");
+                formik.resetForm();
+              } else {
+                alert("Something went wrong!");
+              }
+            })
+            .catch((error) => console.log(error));
         }}
       >
         {(formik) => (
           <Form className="flex flex-col max-w-[600px] w-full">
-
             <div className="pb-8">
-              <p className="text-4xl font-bold inline border-b-4 border-pink-600">
+              <p className="text-4xl px-2 font-bold inline border-b-4 border-[#382bf0]">
                 Contact
               </p>
             </div>
@@ -76,14 +82,21 @@ const Contact = () => {
               </ul>
             </div>
 
-            <TextField name = "name" type = "text" placeholder="Name"/>
-            <TextField name = "email" type = "email" placeholder="Email"/>
-            <TextArea name = "message" type = "text" rows = "10" placeholder="Message"/>
+            <TextField name="name" type="text" placeholder="Name" />
+            <TextField name="email" type="email" placeholder="Email" />
+            <TextArea
+              name="message"
+              type="text"
+              rows="10"
+              placeholder="Message"
+            />
 
-            <button type="submit" className="text-white shadow-2xl shadow-[#040c166b] bg-[#0a192f] border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
+            <button
+              type="submit"
+              className="text-black rounded-full px-4 py-3 my-8 mx-auto flex items-center bg-[#5e43f3] shadow-lg shadow-[#040c166b] font-bold text-lg dark:shadow-lg dark:shadow-[#000000] hover:bg-[#382bf0] hover:-translate-y-1 duration-300"
+            >
               Let's Colloborate
             </button>
-
           </Form>
         )}
       </Formik>
@@ -93,8 +106,8 @@ const Contact = () => {
 
 export default Contact;
 
-
-{/* <form
+{
+  /* <form
         ref={formref}
         onSubmit={handleSubmit}
         className="flex flex-col max-w-[600px] w-full"
@@ -150,4 +163,5 @@ export default Contact;
           Let's Colloborate
         </button>
     </form>
-*/}
+*/
+}
