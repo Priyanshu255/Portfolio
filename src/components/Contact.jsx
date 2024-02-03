@@ -17,7 +17,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full pt-[100px] bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-blue-300 flex justify-center items-center p-4"
+      className="w-full pt-[100px] bg-[#E0E0E0] dark:bg-[#0a192f] text-black dark:text-[#E0E0E0] flex justify-center items-center p-4"
     >
       <Formik
         initialValues={{
@@ -52,7 +52,7 @@ const Contact = () => {
         {(formik) => (
           <Form className="flex flex-col max-w-[600px] w-full">
             <div className="pb-8">
-              <p className="text-4xl px-2 font-bold inline border-b-4 border-[#382bf0]">
+              <p className="text-4xl font-bold inline border-b-4 border-[#382bf0]">
                 Contact
               </p>
             </div>
@@ -93,7 +93,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="text-black rounded-full px-4 py-3 my-8 mx-auto flex items-center bg-[#5e43f3] shadow-lg shadow-[#040c166b] font-bold text-lg dark:shadow-lg dark:shadow-[#000000] hover:bg-[#382bf0] hover:-translate-y-1 duration-300"
+              className="text-[#E0E0E0] rounded-md px-4 py-3 my-8 mx-auto flex items-center bg-[#5e43f3] shadow-lg shadow-[#040c166b] font-bold text-lg dark:shadow-lg dark:shadow-[#000000] hover:bg-[#382bf0] hover:-translate-y-1 duration-300"
             >
               Let's Colloborate
             </button>

@@ -13,7 +13,7 @@ const Home = () => {
     <div name="home" className="w-full h-screen bg-[#E0E0E0] dark:bg-[#0a192f]">
       {/* container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-[#5e43f3] dark:text-[#5e43f3]">Hi, my name is</p>
+        <p className="text-[#5e43f3] dark:text-[#5e43f3] font-bold">Hi, my name is</p>
 
         <h1 className="text-4xl sm:text-7xl font-bold text-[#0a192f] dark:text-[#5e43f3]">
           Priyanshu Pandit
@@ -21,7 +21,7 @@ const Home = () => {
 
         <h2 className="text-2xl sm:text-6xl font-bold text-[#5e43f3]">
           I'm a
-          <span className="dark:text-blue-300 text-purple-500">
+          <span className="dark:text-blue-300 text-gray-6400">
             <TypeAnimation
               sequence={[
                 " Front-end Developer",
@@ -38,7 +38,7 @@ const Home = () => {
           </span>
         </h2>
 
-        <p className="text-[#5e43f3] dark:text-[#5e43f3] py-4 max-w-[700px]">
+        <p className="text-[#5e43f3] dark:text-[#5e43f3] py-4 max-w-[700px] font-semibold">
           I'm a Full-stack developer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I'm focused on
           building responsive Full-stack web applications.
@@ -71,7 +71,7 @@ const Home = () => {
 
         <div className="md:flex gap-3">
           <a href={Resume} download>
-            <button className="text-black font-bold shadow-lg bg-[#5e43f3] shadow-[#040c166b] group rounded-full px-6 py-3 md:mb-2 mt-2 mb-5 flex items-center hover:bg-[#5e43f3] hover:-translate-y-1 duration-300">
+            <button className="text-[#E0E0E0] font-bold shadow-lg bg-[#5e43f3] shadow-[#040c166b] group rounded-full px-6 py-3 md:mb-2 mt-2 mb-5 flex items-center hover:bg-[#382bf0] hover:-translate-y-1 duration-300">
               My Resume
               <span>
                 <TiDownload className="ml-3" />
@@ -79,7 +79,7 @@ const Home = () => {
             </button>
           </a>
           <Link to="projects" smooth={true} duration={500}>
-            <button className="text-black font-bold shadow-lg bg-[#5e43f3] shadow-[#040c166b] group rounded-full px-6 py-3 my-2 flex items-center hover:bg-[#5e43f3] hover:-translate-y-1 duration-300">
+            <button className="text-[#E0E0E0] font-bold shadow-lg bg-[#5e43f3] shadow-[#040c166b] group rounded-full px-6 py-3 my-2 flex items-center hover:bg-[#382bf0] hover:-translate-y-1 duration-300">
               View Work
               {/* <span className="group-hover:rotate-90 origin-right duration-300 group-hover:translate-y-1 "> */}
               <span>

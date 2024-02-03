@@ -7,11 +7,11 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="w-full pt-[100px] pb-[50px] bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-blue-300"
+      className="w-full pt-[100px] pb-[50px] bg-[#E0E0E0] dark:bg-[#0a192f] text-[#0a192f] dark:text-[#E0E0E0]"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 px-1 border-[#382bf0]">
+          <p className="text-4xl font-bold inline border-b-4 border-[#382bf0]">
             Projects
           </p>
           <p className="py-6">Check out some of my recent work</p>
@@ -21,26 +21,26 @@ const Projects = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-7">
           {/* grid items*/}
           {projects.map((item, index) => (
-            <div className="flex flex-col rounded-lg projectCard hover:-translate-y-1 duration-300" key={index}>
-              <span className="px-4 py-2 text-[23px] font-bold text-[#0a192f] dark:text-blue-300 border-b-4 border-[#382bf0] tracking-wider">
+            <div className="flex flex-col rounded-md projectCard hover:-translate-y-1 duration-300" key={index}>
+              <span className="px-4 py-2 text-[23px] font-bold text-[#0a192f] dark:text-[#E0E0E0] border-b-4 border-[#382bf0] tracking-wider">
                 {item.name}
               </span>
               <img className="mx-2 mt-6 projectCard hover:-translate-y-2 duration-300" src={item.image} />
-              <div className="py-5 text-center">
+              <div className="py-4 text-center">
                 <a href={item.live}>
-                  <button className="text-center rounded-full px-4 py-2 m-2 bg-[#5e43f3] shadow-lg shadow-[#040c166b] text-black font-bold text-lg hover:bg-[#382bf0] dark:shadow-lg dark:shadow-[#000000] hover:-translate-y-1 duration-300">
+                  <button className="text-center rounded-md px-5 py-2 m-2 bg-[#5e43f3] shadow-lg shadow-[#040c166b] text-[#E0E0E0] font-bold text-md hover:bg-[#382bf0] dark:shadow-lg dark:shadow-[#000000] hover:-translate-y-1 duration-300">
                     Try here
                   </button>
                 </a>
                 <a href={item.github}>
-                  <button className="text-center rounded-full px-4 py-2 m-2 bg-[#5e43f3] shadow-lg shadow-[#040c166b] text-black font-bold text-lg hover:bg-[#382bf0] dark:shadow-lg dark:shadow-[#000000] hover:-translate-y-1 duration-300">
+                  <button className="text-center rounded-md px-5 py-2 m-2 bg-[#5e43f3] shadow-lg shadow-[#040c166b] text-[#E0E0E0] font-bold text-md hover:bg-[#382bf0] dark:shadow-lg dark:shadow-[#000000] hover:-translate-y-1 duration-300">
                     Source Code
                   </button>
                 </a>
               </div>
               <div className="px-4 pt-0 pb-5">
-                <p className="pb-3" ><b>Technology used: </b>{item.tech}</p>
-                <p><b>Description: </b>{item.description}</p>
+                <p className="pb-3 text-sm font-semibold" ><b>Technology used: </b>{item.tech}</p>
+                <p className="text-sm font-semibold" ><b>Description: </b>{item.description}</p>
               </div>
               {/* <div
                 style={{ backgroundImage: `url(${item.image})` }}

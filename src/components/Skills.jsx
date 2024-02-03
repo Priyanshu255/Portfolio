@@ -6,12 +6,12 @@ const Skills = () => {
   return (
     <div
       name="skills"
-      className="w-full pt-[100px] bg-[#E0E0E0] dark:bg-[#0a192f] text-black dark:text-blue-300"
+      className="w-full pt-[100px] bg-[#E0E0E0] dark:bg-[#0a192f] text-black dark:text-[#E0E0E0]"
     >
       {/* container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div>
-          <p className="text-4xl px-2 font-bold inline border-b-4 border-[#382bf0]">
+          <p className="text-4xl font-bold inline border-b-4 border-[#382bf0]">
             Skills
           </p>
           <p className="py-4">These are the technologies I've worked with</p>
