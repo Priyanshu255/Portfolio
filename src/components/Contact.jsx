@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -26,27 +27,60 @@ const Contact = () => {
           message: "",
         }}
         validationSchema={validate}
-        onSubmit={(values, formik) => {
+        onSubmit={async (values, formik) => {
           const formData = new FormData();
           Object.entries(values).forEach(([key, value]) => {
             formData.append(key, value);
           });
-          fetch("https://getform.io/f/dc135e7d-8317-4e8a-a369-c005a4c1cc94", {
-            method: "POST",
-            body: formData,
-            headers: {
-              Accept: "application/json",
-            },
-          })
-            .then((response) => {
-              if (response.ok) {
-                alert("Message sent!");
-                formik.resetForm();
-              } else {
-                alert("Something went wrong!");
+          try {
+            const response = await fetch(
+              "https://getform.io/f/dc135e7d-8317-4e8a-a369-c005a4c1cc94",
+              {
+                method: "POST",
+                body: formData,
+                headers: {
+                  Accept: "application/json",
+                },
               }
-            })
-            .catch((error) => console.log(error));
+            );
+            // .then((response) => {
+            if (response.ok) {
+              toast.success("I got your message!  ", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+              });
+              formik.resetForm();
+            } else {
+              toast.error("Something went wrong! Please try after sometime.", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+              });
+            }
+          } catch (error) {
+            console.log(error);
+            toast.error("Something went wrong! Please try after sometime.", {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
+          }
         }}
       >
         {(formik) => (
