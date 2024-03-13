@@ -85,7 +85,7 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          <div onClick={handleTheme} className="ml-6 cursor-pointer dark:text-blue-300 text-[#0a192f]">
+          <div onClick={handleTheme} className="ml-6 cursor-pointer dark:text-[#E0E0E0] text-[#0a192f]">
             {theme === "dark" ? <BiSun size={27} /> : <HiOutlineMoon size={25} />}
           </div>
         </ul>
